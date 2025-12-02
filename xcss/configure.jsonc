@@ -1,11 +1,14 @@
 {
   "proxymap": [
     {
-      "source": "src",
-      "target": "xrc",
+      "source": "compiled",
+      "target": "tutorial",
       "stylesheet": "styles.css",
       "extensions": {
         "html": [
+          "class"
+        ],
+        "md": [
           "class"
         ]
       }
@@ -26,5 +29,6 @@
     // rebuild interval in seconds, (0 => no reload)
   },
   "vendors": "none",
+  "flavour": "xcss-scaffold",
   "environment": "browser"
 }

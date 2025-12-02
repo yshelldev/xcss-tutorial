@@ -4,7 +4,9 @@
   "description": "Tutorial walkthrough for XCSS, Try out practical examples on how XCSS Works.",
   "main": "index.js",
   "scripts": {
-    "libc": "npx sass xcss/lib-src:xcss/libraries"
+    "lib:compile": "npx sass libsource:libraries --no-source-map",
+    "lib:watch": "npx sass --watch libsource:libraries --no-source-map",
+    "build": "npm run lib:compile"
   },
   "repository": {
     "type": "git",
@@ -22,8 +24,7 @@
     "url": "https://github.com/yshelldev/xcss-tutorial/issues"
   },
   "homepage": "https://github.com/yshelldev/xcss-tutorial#readme",
-  "dev-dependencies": {
-    "sass": "^1.94.2",
-    "xcss-package": "^0.0.11"
+  "devDependencies": {
+    "xcss-scaffold": "latest"
   }
 }
