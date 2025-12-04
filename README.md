@@ -6,14 +6,29 @@ Training and reference matririal of specific use cases of XCSS.
 
 ## Initialize
 
-Run:
+### Install Packages
+
+- This repository is initilized with offial minimal spin [XCSS Scaffold](https://www.npmjs.com/package/xcss-scaffold), Which also installs [XCSS Central](https://www.npmjs.com/package/xcss-central) along with it.
+
 ```sh
-npm install xcss-central
+  # Install XCSS Scaffold and XCSS Central(dependency).
+  npm install xcss-scaffold 
+  
+  # Reconfigure XCSS Central with the installed flavour.
+  xcss init xcss-scaffold 
 ```
 
-> Sass or similar Styling systems is preffered while spinning your personal flavours.
+> If you want to go flavourless install [XCSS Central](https://www.npmjs.com/package/xcss-central), and start from scratch.
 
+### Install Extension In your Editor.
+
+Available in:
+
+- [Visual studio marketplace](https://marketplace.visualstudio.com/items?itemName=yshelldev.xcss-client)
+- [Open VSX Registary](https://open-vsx.org/extension/yshelldev/xcss-client)
+
+After installation go through [tutorial](./tutorial/extention.md), to get familiar with shortcuts and features.
 
 ## Navigation
 
-- ()[]
+- [Go through setup directory.](./xcss/README.md)
