@@ -1,0 +1,11 @@
+<staple staple-mod$round>
+    <svg color-interpolation-filters="sRGB">
+        <filter id="round">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10"></feGaussianBlur>
+            <feComponentTransfer result="threshold">
+                <feFuncA type="gamma" amplitude="80" exponent="10" offset="-2"></feFuncA>
+            </feComponentTransfer>
+            <feComposite in="SourceGraphic" operator="atop"></feComposite>
+        </filter>
+    </svg>
+</staple>

@@ -1,0 +1,41 @@
+<summon lucide$$icons="
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:space-around;
+	filter: url(#round);
+	filter: url(#pack-lower);
+	filter: url(#round) url(#pack-lower);
+	/* correct channel addition blend mode */
+    mix-blend-mode: plus-lighter;
+">
+	<div class="=lucide$$icon">
+		<svg class="~lucide$$icon =lucide"></svg>
+	</div>
+</summon>
+
+<summon lucide$$icon="
+	pointer-events: all;
+	width: 3em;
+	aspect-ratio: 1;
+	transition: 1s;
+	border-radius: 0em;
+	border-radius: 1em;
+	border-radius: 1.5em;
+	background: #fff;
+	padding: .85em;
+	margin: -0.2em;
+	cursor: pointer;
+	overflow: visible;
+	transition:
+		scale 1s linear(0, 0.038 1.6%, 0.154 3.4%, 1.026 12.6%, 1.166 15.2%, 1.234 18%, 1.221 21.6%, 1.005 31.2%, 0.944 37%,
+		1.013 56%, 1)
+		/* , border-radius .3s ease-in-out */;
+	will-change: transform;
+	nav:has(&:active) &:hover {
+		transition-timing-function: ease-out;
+		transition-duration: 130ms;
+		scale: .75;
+	}
+">
+	<use href="#"></use>
+</summon>

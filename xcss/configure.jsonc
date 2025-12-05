@@ -9,6 +9,10 @@
           "id",
           "class"
         ],
+        "htm": [
+          "id",
+          "class"
+        ],
         "md": [
           "id",
           "class"
@@ -30,8 +34,8 @@
     // ═══════════════════════════════════
     // STAPLE REPLACEMENT TAGS
     // ═══════════════════════════════════
-    "staple-prefix": "<div style=\"display: none;\">",
-    "staple-suffix": "</div>",
+    // "staple-prefix": "<div style=\"display: none;\">",
+    // "staple-suffix": "</div>",
     // ═══════════════════════════════════
     // STYLES REPLACEMENT TAGS
     // ═══════════════════════════════════

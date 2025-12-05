@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XCSS Tutorial Example</title>
+    <!-- style -->
+</head>
+
+<style -$body-animate=>
+    @keyframes bg-vertical {
+        from {
+            background-position-y: bottom;
+        }
+
+        to {
+            background-position-y: 70%;
+        }
+    }
+</style>
+
+<body class="~$body" -$body="
+	~ $body-animate;
+	animation: bg-vertical 20s ease-in-out infinite alternate;
+	background: rgb(2, 6, 23);
+	height: 100svh;
+	display: grid;
+	place-items: center;
+	place-content: center;
+	color:white;
+	font-family: 'Manrope', sans-serif;
+	background-image: url('https://images.unsplash.com/photo-1745986143057-e611033e37e8');
+	background-size: cover;
+	background-position: bottom;
+	overflow: hidden;
+	grid-template-area:'stack';
+	& > * {
+		grid-area: stack;
+	}
+	& > svg {
+		position: absolute;
+		opacity: 0;
+		pointer-events: none;
+	}
+">
+    <nav class="~$nav" -$nav="
+    	~ staple-pack$$pack-upper;
+    	~ staple-distortion$$glass staple-distortion$$liquid-glass;
+    	~ staple-distortion$$liquid-glass-new staple-distortion$$fresnal;
+    	width: 100%;
+    	position: relative;
+    	font-size: 1.5rem;
+    	padding: .5em;
+    	resize: horizontal;
+    	overflow: hidden;
+    	&::before {
+    		content: '';
+    		position: absolute;
+    		inset: 0;
+    		backdrop-filter: url(#pack-upper);
+    	}
+    	&::after {
+    		content: '';
+    		position: absolute;
+    		inset: 0;
+    		pointer-events: none;
+    		backdrop-filter: url(#glass);
+    		backdrop-filter: url(#liquid-glass);
+    		backdrop-filter: url(#liquid-glass-new);
+    		backdrop-filter:
+    			url(#liquid-glass-new)
+    			url(#fresnel)
+    			drop-shadow(0 0 10px #0003);
+    	}
+    	&::-webkit-resizer {
+    		background: #fff;
+    		border-radius: 99em;
+    		box-shadow: 0 0 20px 1px #fff;
+    		outline: 20px solid transparent;
+    		pointer-events: all;
+    	}
+    ">
+        <div class="~lucide$$icons">
+            <svg class="lucide$$icon ~lucide$$icon-camera">
+                <use href="#camera"></use>
+            </svg>
+            <svg class="lucide$$icon ~lucide$$icon-home">
+                <use href="#home"></use>
+            </svg>
+            <svg class="lucide$$icon ~lucide$$icon-search">
+                <use href="#search"></use>
+            </svg>
+            <svg class="lucide$$icon ~lucide$$icon-store">
+                <use href="#store"></use>
+            </svg>
+        </div>
+    </nav>
+
+
+    <!-- staple -->
+</body>
+
+</html>

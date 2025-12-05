@@ -1,5 +1,6 @@
 {
   "-DesignApproach": "#{-MobileFirst}",
+  "Load": "body[data-loading]",
   // Values for #DesignApproach
   "-MobileFirst": "min-width",
   "-DesktopFirst": "max-width",
